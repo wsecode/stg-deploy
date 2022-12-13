@@ -2,7 +2,7 @@
 
 if [[ -z $GITHUB_TOKEN ]] ; then
     echo 'Enter your GITHUB_TOKEN?'
-    read GITHUB_TOKEN
+    read -s GITHUB_TOKEN
 fi
 
 repo_with_org='innocraft/matomo-cloud'
@@ -64,3 +64,6 @@ else
     echo "PR creation failed. $(echo $res | jq -r '.errors[].message')"
     exit 1
 fi
+
+echo "wikum" | openssl aes-256-cbc -a -salt -pass pass:somepassword
+echo "U2FsdGVkX18DU1EdsTI6suRs4A5N1DjjZSzQbciClrI=" | openssl aes-256-cbc -a -salt -pass pass:somepassword
