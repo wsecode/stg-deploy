@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ -z $GITHUB_TOKEN ]] ; then
+    echo 'Enter your GITHUB_TOKEN?'
+    read GITHUB_TOKEN
+fi
+
 repo_with_org='innocraft/matomo-cloud'
 from_branch='develop'
 to_branch='staging'
@@ -58,4 +63,3 @@ else
     echo "PR creation failed. $(echo $res | jq -r '.errors[].message')"
     exit 1
 fi
-

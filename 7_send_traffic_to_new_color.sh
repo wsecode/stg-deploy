@@ -1,6 +1,7 @@
 #!/bin/bash
-. ./0_aws_creds.sh
 
+echo 'not good change set. check variables.'
+exit 1
 # aws cloudformation describe-change-set --change-set-name arn:aws:cloudformation:eu-central-1:201397197741:changeSet/staging-change-set-1670836550/d8ce02c6-6370-404d-bc1d-e1b9152d99d9 | jq
 
 # exit

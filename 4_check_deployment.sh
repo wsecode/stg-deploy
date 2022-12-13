@@ -1,7 +1,5 @@
 #!/bin/bash
 
-. ./0_aws_creds.sh
-
 check_pipeline_states () {
     local status=$(aws codepipeline get-pipeline-state --name staging-dev-application --query 'stageStates[*].[stageName,latestExecution.status]')
     # local status=$(cat wait.sh)
