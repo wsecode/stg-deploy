@@ -1,5 +1,8 @@
 #!/bin/bash
 
+rm ./old_color
+rm ./new_color
+
 asg_color_total () {
     # local archiving_asg_tot=$(aws autoscaling describe-auto-scaling-groups --auto-scaling-group-names "Archiving-DEVL-staging-Simplified-$1" --query 'AutoScalingGroups[*].[MinSize,MaxSize,DesiredCapacity]' | jq 'flatten | add')
     # local tracking_asg_tot=$(aws autoscaling describe-auto-scaling-groups --auto-scaling-group-names "Tracking-DEVL-staging-Simplified-$1" --query 'AutoScalingGroups[*].[MinSize,MaxSize,DesiredCapacity]' | jq 'flatten | add')
