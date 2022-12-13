@@ -35,7 +35,8 @@ if [ "$res_code" -eq "201" ]; then
 
     echo "PR created. mergeable=$mergeable, mergeable_state=$mergeable_state"
     # printf '\e]8;;http://example.com\e\\This is a link\e]8;;\e\\\n'
-    open -n -a "Google Chrome" --args "$(echo $res | jq -r '.html_url')/files"
+    # open -n -a "Google Chrome" --args "$(echo $res | jq -r '.html_url')/files"
+    echo "$(echo $res | jq -r '.html_url')/files"
 
 
     # if [[ -n $mergeable && -n $mergeable_state && $mergeable == "true" && $mergeable_state == "clean" ]]; then
